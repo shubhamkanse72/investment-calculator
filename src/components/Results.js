@@ -11,10 +11,10 @@ export default function Results({ input }) {
       <thead>
         <tr>
           <th>Year</th>
-          <th>Investment Value</th>
+          <th>Invested Capital</th>
           <th>Interest (Year)</th>
           <th>Total Interest</th>
-          <th>Invested Capital</th>
+          <th>Investment Value</th>
         </tr>
       </thead>
       <tbody>
@@ -27,10 +27,10 @@ export default function Results({ input }) {
           return (
             <tr key={yearData.year}>
               <td>{yearData.year}</td>
-              <td>{formatter.format(yearData.valueEndOfYear)}</td>
+              <td>{totalAmountInvested}</td>
               <td>{formatter.format(yearData.interest)}</td>
               <td>{formatter.format(totalInterest)}</td>
-              <td>{totalAmountInvested}</td>
+              <td>{formatter.format(yearData.valueEndOfYear)}</td>
             </tr>
           );
         })}
